@@ -3,10 +3,10 @@
 class TV
 {
 public:
-	TV(int maxCh)
+	TV(int& maxCh)
 		:maxChannel(maxCh)
 	{}
-	TV(bool st)
+	TV(bool& st)
 		:state(st)
 	{}
 

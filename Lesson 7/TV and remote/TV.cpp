@@ -12,17 +12,17 @@ void TV::power()
 void TV::nextChannel()
 {
 	if (state == true && currChannel < maxChannel)
-		currChannel++;
+		++currChannel;
 	else
-		std::cout << "Current chanel is max!" << std::endl;
+		currChannel = 1;
 }
 
 void TV::prevChannel()
 {
 	if (state == true && currChannel > 1)
-		currChannel--;
+		--currChannel;
 	else
-		std::cout << "Current chanel is min!" << std::endl;
+		currChannel = maxChannel;
 }
 
 void TV::incVolume()

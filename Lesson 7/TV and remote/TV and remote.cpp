@@ -6,9 +6,20 @@
 #include "TV.h"
 int main()
 {
-    TV tv(500);
+    TV tv(17);
+    TV tv2(120);
+    tv.print();
     tv.power();
     tv.incVolume();
     tv.print();
+    Remote remote(&tv);
+   /* remote.goToChannel(17);
+    tv.print();*/
+    --remote;
+    tv.print();
+    tv2.print();
+    remote.changeTV(tv2);
+    remote.power();
+    tv2.print();
 }
 
